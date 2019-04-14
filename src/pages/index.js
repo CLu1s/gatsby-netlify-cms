@@ -2,6 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import styled from 'styled-components'
+
+
+const StyledLink = styled(Link)`
+`
 
 export default class IndexPage extends React.Component {
   render() {

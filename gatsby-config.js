@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
-    description: 'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+    title: 'Luis React & Front-end Developer',
+    description: 'I´m Jose Luis and I am a enthusiastic javascript developer and front-end.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -54,7 +54,13 @@ module.exports = {
             options: {
               destinationDir: 'static',
             }
-          }
+          },
+          {
+            resolve: 'gatsby-plugin-typography',
+            options: {
+              pathToConfigModule: `src/utils/typography`,
+            }
+           }
         ],
       },
     },
