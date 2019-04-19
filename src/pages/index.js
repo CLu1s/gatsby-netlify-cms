@@ -32,9 +32,9 @@ const PostContainer = styled.div`
   flex-wrap: wrap;
 `
 const Post = styled.div`
-  flex: 0 0 23%;
+  flex: 0 0 100%;
+  margin-top: 5%;
   @media (max-width: 767.98px) { 
-    flex: 0 0 100%;
     margin-bottom: 40px;
   }
 `
@@ -42,6 +42,26 @@ const PostTitle = styled.h3`
   margin: 0 0 10px 0;
   a{
    font-size: 1.4rem;
+  }
+`
+const StyledLink = styled(Link)`
+  color: #177e89;
+  &:hover{
+    color: #ffc857;
+  }
+`
+const PostInfo = styled.div`
+  margin-bottom: 1%;
+`
+const Button = styled(Link)`
+  font-family: 'Roboto';
+  border: solid 1px #177e89;
+  color: #177e89;
+  border-radius: 6px;
+  padding: 6px;
+  &:hover{
+    border: solid 1px #ffc857;
+    color: #ffc857;
   }
 `
  const IndexPage =  ({data}) => {
@@ -62,21 +82,21 @@ const PostTitle = styled.h3`
                 .map(({ node: post }) => (
                   <Post key={post.id}>
                     <PostTitle>
-                      <Link className="has-text-primary" to={post.fields.slug}>
+                      <StyledLink  to={post.fields.slug}>
                         {post.frontmatter.title}
-                      </Link>
+                      </StyledLink>
                     </PostTitle>
-                    <p>
-                      <span> &bull; </span>
+                    <PostInfo>
+                      <span>  </span>
                       <small>{post.frontmatter.date}</small>
-                    </p>
+                    </PostInfo>
                     <p>
                       {post.excerpt}
                       <br />
                       <br />
-                      <Link className="button is-small" to={post.fields.slug}>
+                      <Button to={post.fields.slug}>
                         Keep Reading →
-                      </Link>
+                      </Button>
                     </p>
                   </Post>
                 ))}
