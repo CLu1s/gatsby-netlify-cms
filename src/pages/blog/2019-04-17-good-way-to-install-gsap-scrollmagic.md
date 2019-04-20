@@ -10,13 +10,13 @@ tags:
   - animation
 ---
 First things first you need to install the libraries
-
+<?prettify linenums=1?>
 ```
 npm install gsap scrollmagic imports-loader jquery
 ```
 
 then we need to import these to our project:
-
+<?prettify linenums=1?>
 ```
 import $ from 'jquery';
 import {TweenMax, TimelineMax,} from "gsap";

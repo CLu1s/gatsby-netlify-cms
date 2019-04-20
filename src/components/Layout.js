@@ -29,6 +29,7 @@ const TemplateWrapper = ({ children }) => (
 	        <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
 	
 	        <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400" />
+          <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
 	        <meta name="theme-color" content="#fff" />
 
 	        <meta property="og:type" content="business.business" />
