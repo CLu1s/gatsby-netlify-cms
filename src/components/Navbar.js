@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import {colors} from './misc/variables'
 // import logo from '../img/logo.svg'
 
 
@@ -8,10 +9,34 @@ import styled from 'styled-components'
 
 const LogoName = styled.h1`
   font-size: 24px;
-  color: black;
+  color: ${colors.white};
   font-weight: bold;
 `
-
+const NavMenu = styled.div`
+  display: flex;
+  align-items: stretch;
+  margin-right: -.75rem;
+  flex: 1 0 auto;
+  justify-content: right;
+  margin: auto;
+  @media (max-width: 767.98px) { 
+    flex-wrap: wrap;
+  }
+`
+const NavBarItem = styled(Link)`
+  color: ${colors.white}
+  flex: 1 0 100px;
+  max-width: 100px;
+  @media (max-width: 767.98px) { 
+    color: ${colors.black}
+    flex: 1 0 100%;
+    max-width: 100%;
+    text-align: center;
+   }
+   &:hover{
+    text-decoration: underline;
+   }
+`;
 const Navbar = class extends React.Component {
 
   componentDidMount() {
@@ -40,7 +65,7 @@ const Navbar = class extends React.Component {
  render() {
    return (
   
-  <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
+  <nav className="navbar" role="navigation" aria-label="main-navigation">
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item" title="Logo">
@@ -55,17 +80,17 @@ const Navbar = class extends React.Component {
         </div>
       </div>
       <div id="navMenu" className="navbar-menu">
-      <div className="navbar-start has-text-centered">
-        <Link className="navbar-item" to="/about">
+      <NavMenu>
+        <NavBarItem to="/about">
           About
-        </Link>
-        <Link className="navbar-item" to="/products">
+        </NavBarItem>
+        <NavBarItem to="/products">
           Products
-        </Link>
-        <Link className="navbar-item" to="/contact">
+        </NavBarItem>
+        <NavBarItem to="/contact">
           Contact
-        </Link>
-      </div>
+        </NavBarItem>
+      </NavMenu>
       </div>
     </div>
   </nav>

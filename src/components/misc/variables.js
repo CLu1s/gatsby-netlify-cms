@@ -1,0 +1,11 @@
+const colors = {
+  black: "#141618",
+  white: "#f3f3f3",
+  midnight_green: "#084c61",
+  metallic_seawed: "#177e89",
+  red: "#db3a34",
+  yellow: "#ffc857"
+};
+
+
+export {colors};

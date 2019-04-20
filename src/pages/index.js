@@ -3,14 +3,13 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import styled from 'styled-components'
-import heroBanner from '../img/heroBanner.jpg'
+import {colors} from '../components/misc/variables'
 
 const HeroBanner = styled.div`
   width: 100%;
   height: 70vh;
-  background-color: blue;
+  background-color: ${colors.black};
   display: flex;
-  background-image: url(${heroBanner});
   background-position: center;
   background-size: cover;
   text-align: center;
