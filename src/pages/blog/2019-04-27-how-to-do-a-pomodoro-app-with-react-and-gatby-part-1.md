@@ -7,19 +7,19 @@ description: >-
   app using Gatsby and React
 ---
 We'll use Gatsby CLI if you don't have installed yet just type:
-
+<?prettify linenums=1?>
 ```
 npm install -g gatsby-cli
 ```
 
 And then we'll create our new project with:
-
+<?prettify linenums=1?>
 ```
 gatsby new gatsby-pomodoro-react
 ```
 
 and place inside our new project directory
-
+<?prettify linenums=1?>
 ```
 cd gatsby-pomodoro-react
 ```
