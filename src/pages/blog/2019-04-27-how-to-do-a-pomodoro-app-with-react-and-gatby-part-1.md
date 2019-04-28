@@ -6,6 +6,8 @@ description: >-
   The first part of a series of mini tutorials for developing a simple Pomodoro
   app using Gatsby and React
 ---
+## Goals
+
 We'll use Gatsby CLI if you don't have installed yet just type:
 <?prettify linenums=1?>
 ```
@@ -24,7 +26,7 @@ and place inside our new project directory
 cd gatsby-pomodoro-react
 ```
 
-If everything is correct you should see next screen in [ http://localhost:8000/](http://localhost:8000/)
+If everything is correct you should see the next screen in [ http://localhost:8000/](http://localhost:8000/)
 
 ![gatsby](/img/deepinscreenshot_seleccionar-área_20190427174631.png "gatsby")
 
